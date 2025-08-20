@@ -34,6 +34,8 @@ def main():
 
         print("Result:", result)
 
+      history.append(f"{num1} {op} {num2} = {result}")
+
         cont = input("Do you want to perform another calculation? (y/n): ")  # <-- Added this line
         if cont.lower() != 'y':  # <-- Added this line to break the loop
             print("Goodbye!")
