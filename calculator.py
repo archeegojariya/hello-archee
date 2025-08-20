@@ -14,9 +14,12 @@ def divide(a, b):
         return "Error: Cannot divide by zero"
     return a / b
 
+def exponent(a, b):
+    return a ** b
+
 def main():
     print("Simple Calculator")
-    while True:  # <-- Added this line to start the loop
+    while True:
         num1 = float(input("Enter first number: "))
         op = input("Enter operation (+, -, *, /, ^): ")
         num2 = float(input("Enter second number: "))
@@ -29,17 +32,16 @@ def main():
             result = multiply(num1, num2)
         elif op == '/':
             result = divide(num1, num2)
-            elif op == '^':   
+        elif op == '^':
             result = exponent(num1, num2)
         else:
             result = "Invalid operator"
 
         print("Result:", result)
+        history.append(f"{num1} {op} {num2} = {result}")
 
-      history.append(f"{num1} {op} {num2} = {result}")
-
-        cont = input("Do you want to perform another calculation? (y/n): ")  # <-- Added this line
-        if cont.lower() != 'y':  # <-- Added this line to break the loop
+        cont = input("Do you want to perform another calculation? (y/n): ")
+        if cont.lower() != 'y':
             print("Goodbye!")
             break
 
