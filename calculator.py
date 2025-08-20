@@ -18,7 +18,7 @@ def main():
     print("Simple Calculator")
     while True:  # <-- Added this line to start the loop
         num1 = float(input("Enter first number: "))
-        op = input("Enter operation (+, -, *, /): ")
+        op = input("Enter operation (+, -, *, /, ^): ")
         num2 = float(input("Enter second number: "))
 
         if op == '+':
