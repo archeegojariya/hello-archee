@@ -29,6 +29,8 @@ def main():
             result = multiply(num1, num2)
         elif op == '/':
             result = divide(num1, num2)
+            elif op == '^':   
+            result = exponent(num1, num2)
         else:
             result = "Invalid operator"
 
